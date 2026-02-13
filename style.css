@@ -1,3 +1,4 @@
+/* Basic reset and global settings */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +10,12 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Main wrapper with gradient background */
 .main {
   background: linear-gradient(180deg, #eaf6ff 0%, #f6fbff 60%, #ffffff 100%);
 }
 
+/* Primary layout container - two column flex layout */
 .container {
   display: flex;
   gap: 40px;
@@ -21,6 +24,7 @@ body {
   padding: 40px;
 }
 
+/* Left side - form and info section */
 .left-container {
   flex: 1;
   display: flex;
@@ -28,10 +32,16 @@ body {
   gap: 30px;
 }
 
+/* Right side - features grid */
 .right-container {
   flex: 1;
 }
 
+/* ============================================
+   LEFT CONTAINER STYLES
+   ============================================ */
+
+/* Top header with logo and urgency badge */
 .header {
   display: flex;
   justify-content: space-between;
@@ -42,6 +52,7 @@ body {
   width: 180px;
 }
 
+/* "Only 3 slots left" urgency badge */
 .grey {
   display: flex;
   align-items: center;
@@ -60,6 +71,7 @@ body {
   height: 18px;
 }
 
+/* Main headline and subheading section */
 .sentence {
   display: flex;
   flex-direction: column;
@@ -72,6 +84,7 @@ body {
   font-weight: 600;
 }
 
+/* Gradient text effect for headline */
 .sentence .firstcol {
   background: linear-gradient(90deg, #0788be 0%, #cc6731 100%);
   background-clip: text;
@@ -92,6 +105,7 @@ body {
   line-height: 1.6;
 }
 
+/* Savings badge - "Save $299+" */
 .white {
   display: flex;
   align-items: center;
@@ -118,6 +132,7 @@ body {
   margin: 0;
 }
 
+/* Main form container */
 .form-container {
   border: 2px solid #e5e7eb;
   border-radius: 24px;
@@ -125,6 +140,7 @@ body {
   background: white;
 }
 
+/* Custom numbered list styling with circular badges */
 .form-container ol {
   list-style-type: none;
   counter-reset: li;
@@ -140,6 +156,7 @@ body {
   gap: 12px;
 }
 
+/* Circle number badges (1, 2, etc.) */
 .form-container li::before {
   content: counter(li);
   border-radius: 50%;
@@ -160,6 +177,7 @@ body {
   font-weight: 600;
 }
 
+/* Dropdown selectors */
 #select1,
 #select2 {
   margin-bottom: 16px;
@@ -173,6 +191,7 @@ body {
   cursor: pointer;
 }
 
+/* Name and phone fields row */
 .row {
   display: flex;
   gap: 12px;
@@ -191,6 +210,7 @@ body {
   margin: 0;
 }
 
+/* Email input field */
 #email {
   margin-bottom: 16px;
   width: 100%;
@@ -201,6 +221,7 @@ body {
   font-size: 15px;
 }
 
+/* Submit button */
 button {
   width: 100%;
   display: flex;
@@ -227,6 +248,7 @@ button img {
   height: 16px;
 }
 
+/* Footer under the button - "No Payment Required" etc. */
 .foot {
   display: flex;
   justify-content: center;
@@ -246,6 +268,7 @@ button img {
   margin: 0;
 }
 
+/* Social proof notification - "Amanda S. from New York..." */
 .info {
   display: flex;
   align-items: center;
@@ -272,6 +295,7 @@ button img {
   font-weight: 400;
 }
 
+/* Stats cards - 4.9 rating, 15K+ LLCs, 99.9% success */
 .inside-grid {
   display: flex;
   gap: 12px;
@@ -308,6 +332,11 @@ button img {
   margin: 0;
 }
 
+/* ============================================
+   RIGHT CONTAINER STYLES
+   ============================================ */
+
+/* Features grid layout */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -319,6 +348,7 @@ button img {
     "included included";
 }
 
+/* Hero image at the top */
 .hero {
   grid-area: hero;
   border-radius: 20px;
@@ -349,6 +379,7 @@ button img {
   grid-area: included;
 }
 
+/* Feature cards - Expert Consultation & Zero Obligation */
 .expert,
 .zeroobli {
   border: 2px solid #e5e7eb;
@@ -382,6 +413,7 @@ button img {
   line-height: 1.5;
 }
 
+/* Money-back guarantee card with gradient border */
 .money {
   border: 2px solid transparent;
   border-radius: 12px;
@@ -419,6 +451,7 @@ button img {
   margin: 0;
 }
 
+/* "What's Included" card with checklist */
 .included {
   border: 2px solid transparent;
   background:
@@ -457,6 +490,7 @@ button img {
   display: inline-block;
 }
 
+/* List of included features with custom checkmark bullets */
 .included ul {
   margin: 0;
   padding: 0;
@@ -471,6 +505,7 @@ button img {
   line-height: 1.5;
 }
 
+/* Custom checkmark icon for each list item */
 .included ul li::before {
   content: "";
   position: absolute;
@@ -483,6 +518,7 @@ button img {
   top: 2px;
 }
 
+/* Divider line */
 hr {
   margin: 24px auto 0;
   width: 90%;
@@ -490,6 +526,7 @@ hr {
   border-top: 1px solid #d1d5db;
 }
 
+/* "$299 value - FREE today" footer */
 .last-line {
   display: flex;
   justify-content: center;
@@ -511,6 +548,11 @@ hr {
   font-size: 32px;
 }
 
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet layout - stack columns vertically */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -522,6 +564,7 @@ hr {
     font-size: 30px;
   }
 
+  /* Single column grid on tablets */
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -533,6 +576,7 @@ hr {
   }
 }
 
+/* Mobile layout - smaller text and spacing */
 @media (max-width: 768px) {
   .container {
     padding: 16px;
@@ -551,10 +595,12 @@ hr {
     padding: 20px;
   }
 
+  /* Stack name and phone fields vertically */
   .row {
     flex-direction: column;
   }
 
+  /* Stack stats cards vertically */
   .inside-grid {
     flex-direction: column;
   }
@@ -563,6 +609,7 @@ hr {
     padding: 18px;
   }
 
+  /* Adjust hero image ratio for mobile */
   .hero {
     aspect-ratio: 4 / 3;
   }
@@ -579,6 +626,7 @@ hr {
   }
 }
 
+/* Very small mobile - stack header vertically */
 @media (max-width: 450px) {
   .header {
     flex-direction: column;
