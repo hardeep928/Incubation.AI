@@ -483,10 +483,9 @@ button img {
   color: white;
   background-color: #1e5aa6;
   border-radius: 12px;
-  padding: 4px 16px;
+  padding: 7px 49px;
   font-size: 12px;
   font-weight: 600;
-  display: inline-block;
 }
 
 /* List of included features with custom checkmark bullets */
