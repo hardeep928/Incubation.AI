@@ -37,10 +37,6 @@ body {
   flex: 1;
 }
 
-/* ============================================
-   LEFT CONTAINER STYLES
-   ============================================ */
-
 /* Top header with logo and urgency badge */
 .header {
   display: flex;
@@ -332,10 +328,6 @@ button img {
   margin: 0;
 }
 
-/* ============================================
-   RIGHT CONTAINER STYLES
-   ============================================ */
-
 /* Features grid layout */
 .grid-container {
   display: grid;
@@ -547,10 +539,6 @@ hr {
   font-weight: 800;
   font-size: 32px;
 }
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 /* Tablet layout - stack columns vertically */
 @media (max-width: 1024px) {
